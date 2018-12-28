@@ -6,14 +6,19 @@ com isso tb da pra carregar outras coisas em uma so pagina
 Passando dados do server.js pra app_index.html
 // server.js ######################################################################
 
-const http      = require('http');
+const http      = require('http'); 
+
 const express   = require('express');
+
 const path      = require('path'); 
+
 
 const app = express();
 
 let getData = () => {
+
     //O seu método de leitura do arquivo vem aqui
+    
     return 'qualquer que seja o seu resultado aqui';
 }
 
@@ -26,10 +31,13 @@ app.get('/', (req, res) => {
 });
 
 http.createServer(app).listen(8080, () => {
+
     console.log('server funcionando');
+    
 });
 
 // index.html ###############################################################################
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
